@@ -22,7 +22,7 @@ request.onerror = function (event) {
   console.log("Woops! " + event.target.errorCode);
 };
 
-function saveRecord(record) {
+function saveRecord(transaction) {
   // create a transaction on the pending db with readwrite access
   const transaction = db.transaction(["pending"], "readwrite");
 
@@ -30,7 +30,7 @@ function saveRecord(record) {
   const store = transaction.objectStore("pending");
 
   // add record to your store with add method.
-  store.add(record);
+  store.add(transaction);
 }
 
 function checkDatabase() {
