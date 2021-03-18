@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
 
   <title>Budget Tracker</title>
 </head>
+
 <body>
   <div class="wrapper">
     <div class="total">
@@ -33,15 +35,45 @@
           <th>Amount</th>
         </thead>
         <tbody id="tbody">
-          
+
         </tbody>
       </table>
     </div>
-    
+
     <canvas id="myChart"></canvas>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
+  <script>
+    const request = window.indexedDB.open("budget", 1);
+
+    request.onsuccess = event => {
+      console.log("im the indexedDB", request.result.name);
+    };
+
+    request.onupgradeneeded = ({ target }) => {
+      const db = target.result;
+      const objectStore = db.createObjectStore("budget");
+    };
+
+
+  </script>
 </body>
+
 </html>
+<!-- <script>
+  const request = window.indexedDB.open("toDoList", 1);
+
+  // Create schema
+  request.onupgradeneeded = event => {
+    const db = event.target.result;
+
+    // Creates an object store with a listID keypath that can be used to query on.
+    const toDoListStore = db.createObjectStore("budget", { keyPath: "listID" });
+    // Creates a statusIndex that we can query on.
+    toDoListStore.createIndex("statusIndex", "status");
+  }
+
+
+</script> -->
