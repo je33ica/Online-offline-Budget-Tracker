@@ -45,6 +45,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
+  <script src="db.js"></script>
   <script>
     const request = window.indexedDB.open("budget", 1);
 
@@ -62,18 +63,3 @@
 </body>
 
 </html>
-<!-- <script>
-  const request = window.indexedDB.open("toDoList", 1);
-
-  // Create schema
-  request.onupgradeneeded = event => {
-    const db = event.target.result;
-
-    // Creates an object store with a listID keypath that can be used to query on.
-    const toDoListStore = db.createObjectStore("budget", { keyPath: "listID" });
-    // Creates a statusIndex that we can query on.
-    toDoListStore.createIndex("statusIndex", "status");
-  }
-
-
-</script> -->
