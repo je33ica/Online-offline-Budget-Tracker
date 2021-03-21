@@ -44,9 +44,10 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="index.js"></script>
   <script src="db.js"></script>
-  <script>
+  <script src="index.js"></script>
+
+  <!-- <script>
     const request = window.indexedDB.open("budget", 1);
 
     request.onsuccess = event => {
@@ -59,7 +60,16 @@
     };
 
 
-  </script>
+  </script> -->
+  <!-- <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("Server Worker", reg);
+        });
+      });
+    }
+  </script> -->
 </body>
 
 </html>
