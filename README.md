@@ -3,7 +3,7 @@
 Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
 
 
-![offline](https://user-images.githubusercontent.com/67834752/111911197-6c16f400-8a5c-11eb-84d6-3c269910b1da.gif)
+![of](https://user-images.githubusercontent.com/67834752/111917741-84493c00-8a79-11eb-8b3f-8b40e39b6626.gif)
 
 
 # Author: Jessica
