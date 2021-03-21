@@ -135,10 +135,8 @@ function sendTransaction(isAdding) {
       }
     })
     .catch((err) => {
-      console.log("I Have been called");
       // fetch failed, so save in indexed db
       saveRecord(transaction);
-      console.log("im the tran", transaction);
       // clear form
       nameEl.value = "";
       amountEl.value = "";
